@@ -1,7 +1,7 @@
-import React from "react"
-import styled from "styled-components"
-import { Link } from "gatsby"
-import logo from "../../static/logo.svg"
+import React from 'react';
+import styled from 'styled-components';
+import { Link } from 'gatsby';
+import logo from '../../static/logo.svg';
 
 const PageHeader = styled.header`
   position: fixed;
@@ -12,42 +12,42 @@ const PageHeader = styled.header`
   background: #fff;
   border-bottom: 1px solid #f4f6f8;
   padding: 1rem;
-`
+`;
 
 const HeaderContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-`
+`;
 
 const HeaderLogo = styled.img`
   height: 2rem;
   width: 2rem;
-`
+`;
 
-const HeaderNav = styled.nav``
+const HeaderNav = styled.nav``;
 const HeaderNavList = styled.ul`
   margin: 0;
   padding: 0;
   list-style: none;
   display: flex;
-`
+`;
 const HeaderNavListItem = styled.li`
   margin-right: 2rem;
-`
+`;
 
 const HeaderNavListLink = styled(Link)`
   color: #111;
   font-weight: 500;
-  text-decoration: none;
+  text-decoration: ${props => (props.isCurrent ? 'underline' : 'none')};
 
-  :hover {
+  &:hover {
     color: #276ef1;
     text-decoration: none;
   }
-`
+`;
 
-function Header() {
+const Header = () => {
   return (
     <PageHeader>
       <HeaderContainer>
@@ -60,16 +60,16 @@ function Header() {
               <HeaderNavListLink to="/">Articles</HeaderNavListLink>
             </HeaderNavListItem>
             <HeaderNavListItem>
-              <HeaderNavListLink to="/">Projects</HeaderNavListLink>
+              <HeaderNavListLink to="/projects">Projects</HeaderNavListLink>
             </HeaderNavListItem>
             <HeaderNavListItem>
-              <HeaderNavListLink to="/">About</HeaderNavListLink>
+              <HeaderNavListLink to="/about">About</HeaderNavListLink>
             </HeaderNavListItem>
           </HeaderNavList>
         </HeaderNav>
       </HeaderContainer>
     </PageHeader>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

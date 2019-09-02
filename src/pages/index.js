@@ -1,20 +1,21 @@
-import React from "react"
-import PageLayout from "../templates/PageLayout"
-import { graphql } from "gatsby"
-import PostList from "../components/PostList"
+import React from 'react';
+import { graphql } from 'gatsby';
+import Layout from '../components/Layout';
+import PostList from '../components/PostList';
 
 export default ({ data }) => {
   const posts = data.allMarkdownRemark.nodes.map(node => ({
     id: node.id,
     title: node.frontmatter.title,
     slug: node.fields.slug,
-  }))
+  }));
+
   return (
-    <PageLayout>
+    <Layout>
       <PostList posts={posts} />
-    </PageLayout>
-  )
-}
+    </Layout>
+  );
+};
 export const indexPageQuery = graphql`
   query {
     allMarkdownRemark {
@@ -29,4 +30,4 @@ export const indexPageQuery = graphql`
       }
     }
   }
-`
+`;

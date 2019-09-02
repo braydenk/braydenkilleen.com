@@ -1,8 +1,7 @@
-import React from "react"
-import Header from "../components/Header"
-import styled from "styled-components"
-
-import { createGlobalStyle } from "styled-components"
+import styled from 'styled-components';
+import React from 'react';
+import { createGlobalStyle } from 'styled-components';
+import Header from './Header';
 
 const GlobalStyle = createGlobalStyle`
   html {
@@ -72,24 +71,22 @@ const GlobalStyle = createGlobalStyle`
     letter-spacing: 0.01em;
     line-height: 1.6;
   }
+`;
 
-`
-
-const ContentContainer = styled.main`
+const Main = styled.main`
   margin-top: 7rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-`
+`;
 
-function PageLayout({ children }) {
-  return (
-    <>
-      <GlobalStyle />
-      <h1>HELLO</h1>
-    </>
-  )
-}
+const Layout = ({ children }) => (
+  <>
+    <GlobalStyle />
+    <Header />
+    <Main>{children}</Main>
+  </>
+);
 
-export default PageLayout
+export default Layout;
