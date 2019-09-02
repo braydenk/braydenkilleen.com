@@ -1,13 +1,12 @@
 import React from "react"
 import PageLayout from "./PageLayout"
 import { graphql } from "gatsby"
+import Post from "../components/Post"
 
 export default ({ data }) => {
-  console.log(data)
   return (
     <PageLayout>
-      <h1>{data.markdownRemark.frontmatter.title}</h1>
-      <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
+      <Post html={data.markdownRemark.html} />
     </PageLayout>
   )
 }
