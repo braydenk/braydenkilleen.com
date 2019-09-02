@@ -18,13 +18,9 @@ const PageHeader = styled.header`
 
 const HeaderContainer = styled.div`
   display: flex;
-  align-items: center;
+  padding: 0 1rem;
   justify-content: space-between;
-`;
-
-const HeaderLogo = styled.img`
-  height: 2rem;
-  width: 2rem;
+  align-items: center;
 `;
 
 const HeaderNav = styled.nav``;
@@ -32,9 +28,9 @@ const HeaderNav = styled.nav``;
 const HeaderNavSmall = styled(HeaderNav)`
   position: absolute;
   left: 0;
-  top: 4.5rem;
+  top: 0;
   width: 100vw;
-  height: 25vh;
+  height: 100vh;
   background-color: #fff;
 `;
 
@@ -49,7 +45,7 @@ const HeaderNavListSmall = styled(HeaderNavList)`
 `;
 
 const HeaderNavListItem = styled.li`
-  margin-right: 2rem;
+  margin-left: 2rem;
 `;
 
 const HeaderNavListItemSmall = styled(HeaderNavListItem)`
@@ -71,9 +67,11 @@ const MenuIconButton = styled.button`
   background: #fff;
   border: none;
   cursor: pointer;
+  margin: 0;
+  padding: 0;
 `;
 
-const MenuIcon = styled.img`
+const Icon = styled.img`
   height: 2rem;
   width: 2rem;
 `;
@@ -81,6 +79,7 @@ const MenuIcon = styled.img`
 function Header() {
   const [isNavVisible, setIsNavVisible] = useState(false);
   const [isScreenSmall, setIsScreenSmall] = useState(false);
+
   useEffect(() => {
     const mediaQuery = window.matchMedia('(max-width: 500px)');
     mediaQuery.addListener(handleMediaQueryChange);
@@ -124,7 +123,7 @@ function Header() {
   const displayMenuButton = () => {
     return (
       <MenuIconButton onClick={toggleNav}>
-        <MenuIcon src={menuIcon} />
+        <Icon src={menuIcon} />
       </MenuIconButton>
     );
   };
@@ -151,7 +150,7 @@ function Header() {
     <PageHeader>
       <HeaderContainer>
         <Link to="/">
-          <HeaderLogo src={logo} />
+          <Icon src={logo} />
         </Link>
         {isScreenSmall ? displayMenuButton() : displayNav()}
         {isNavVisible && displayMobileNav()}

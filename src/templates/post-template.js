@@ -1,13 +1,16 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-// import Layout from '../components/Layout';
+import PostLayout from '../components/layouts/PostLayout';
+import PageLayout from '../components/layouts/PageLayout';
 
 export default ({ data }) => {
   return (
-    <h1>d</h1>
-    // <Layout>
-    //   <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
-    // </Layout>
+    <PageLayout>
+      <PostLayout
+        title={data.markdownRemark.frontmatter.title}
+        content={data.markdownRemark.html}
+      />
+    </PageLayout>
   );
 };
 

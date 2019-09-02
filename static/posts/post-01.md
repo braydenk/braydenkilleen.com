@@ -3,8 +3,6 @@ date: "2019-05-04"
 title: "My first blog post"
 ---
 
-# Fores viribus inopi
-
 ## Arenti inanes momordit unam bello silices in
 
 Lorem markdownum oscula. Sentirent capistris Pindusque et serrae [Lelegeia

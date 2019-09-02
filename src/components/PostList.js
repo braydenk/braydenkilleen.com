@@ -3,6 +3,8 @@ import styled from 'styled-components';
 import Link from './styled/Link';
 import List from './styled/List';
 
+const PostListContainer = styled.div``;
+
 const ArticleListItem = styled.li`
   margin-bottom: 2rem;
 `;
@@ -10,14 +12,15 @@ const ArticleListItem = styled.li`
 const ArticleLink = styled(Link)`
   display: inline-block;
   width: 100%;
-  font-size: 1.75rem;
-  letter-spacing: -0.01em;
-  line-height: 1.2;
-  margin: 0.5rem 0;
   padding-bottom: 0.5rem;
   color: #111;
   border-bottom: 1px solid #c4cdd5;
   text-decoration: none;
+
+  font-size: 24px;
+  line-height: 38px;
+  font-weight: 500;
+  margin: 8px 0;
 
   :hover {
     color: #276ef1;
@@ -28,7 +31,7 @@ const ArticleLink = styled(Link)`
 
 function PostList({ posts }) {
   return (
-    <div>
+    <PostListContainer>
       <List>
         {posts.map(post => {
           return (
@@ -38,7 +41,7 @@ function PostList({ posts }) {
           );
         })}
       </List>
-    </div>
+    </PostListContainer>
   );
 }
 
