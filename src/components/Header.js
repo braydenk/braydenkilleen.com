@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Link } from 'gatsby';
 import logo from '../../static/logo.svg';
+import Link from './styled/Link';
 
 const PageHeader = styled.header`
   position: fixed;
@@ -39,7 +39,6 @@ const HeaderNavListItem = styled.li`
 const HeaderNavListLink = styled(Link)`
   color: #111;
   font-weight: 500;
-  text-decoration: ${props => (props.isCurrent ? 'underline' : 'none')};
 
   &:hover {
     color: #276ef1;

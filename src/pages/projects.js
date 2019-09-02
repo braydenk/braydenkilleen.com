@@ -1,8 +1,8 @@
 import React from 'react';
-import Layout from '../components/Layout';
 import projectsData from '../data/projects-data';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
+import PageLayout from '../components/layouts/PageLayout';
 
 const ProjectsGrid = styled.div`
   display: grid;
@@ -17,7 +17,7 @@ const ProjectsTile = styled.div`
 
 export default () => {
   return (
-    <Layout>
+    <PageLayout>
       <ProjectsGrid>
         {projectsData.map(project => {
           return (
@@ -34,6 +34,6 @@ export default () => {
           );
         })}
       </ProjectsGrid>
-    </Layout>
+    </PageLayout>
   );
 };

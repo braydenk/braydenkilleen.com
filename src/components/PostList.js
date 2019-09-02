@@ -1,20 +1,11 @@
-import React from "react"
-import { Link } from "gatsby"
-import styled from "styled-components"
-
-const PostsContainer = styled.div`
-  width: 80%;
-`
-
-const ArticleList = styled.ul`
-  margin: 0;
-  padding: 0;
-  list-style: none;
-`
+import React from 'react';
+import styled from 'styled-components';
+import Link from './styled/Link';
+import List from './styled/List';
 
 const ArticleListItem = styled.li`
   margin-bottom: 2rem;
-`
+`;
 
 const ArticleLink = styled(Link)`
   display: inline-block;
@@ -33,22 +24,22 @@ const ArticleLink = styled(Link)`
     text-decoration: none;
     border-bottom: 1px solid #276ef1;
   }
-`
+`;
 
 function PostList({ posts }) {
   return (
-    <PostsContainer>
-      <ArticleList>
+    <div>
+      <List>
         {posts.map(post => {
           return (
             <ArticleListItem key={post.id}>
               <ArticleLink to={post.slug}>{post.title}</ArticleLink>
             </ArticleListItem>
-          )
+          );
         })}
-      </ArticleList>
-    </PostsContainer>
-  )
+      </List>
+    </div>
+  );
 }
 
-export default PostList
+export default PostList;

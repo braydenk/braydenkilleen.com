@@ -1,12 +1,13 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import Layout from '../components/Layout';
+// import Layout from '../components/Layout';
 
 export default ({ data }) => {
   return (
-    <Layout>
-      <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
-    </Layout>
+    <h1>d</h1>
+    // <Layout>
+    //   <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
+    // </Layout>
   );
 };
 

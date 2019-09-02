@@ -1,6 +1,6 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import Layout from '../components/Layout';
+import PageLayout from '../components/layouts/PageLayout';
 import PostList from '../components/PostList';
 
 export default ({ data }) => {
@@ -11,9 +11,9 @@ export default ({ data }) => {
   }));
 
   return (
-    <Layout>
+    <PageLayout>
       <PostList posts={posts} />
-    </Layout>
+    </PageLayout>
   );
 };
 export const indexPageQuery = graphql`

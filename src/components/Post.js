@@ -1,16 +1,11 @@
-import React from "react"
-import styled from "styled-components"
-
-const PostContainer = styled.div`
-  max-width: 70%;
-`
+import React from 'react';
 
 function Post({ html }) {
   return (
-    <PostContainer>
+    <div>
       <div dangerouslySetInnerHTML={{ __html: html }} />
-    </PostContainer>
-  )
+    </div>
+  );
 }
 
-export default Post
+export default Post;

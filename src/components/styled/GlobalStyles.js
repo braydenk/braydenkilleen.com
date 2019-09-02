@@ -1,9 +1,6 @@
-import styled from 'styled-components';
-import React from 'react';
 import { createGlobalStyle } from 'styled-components';
-import Header from './Header';
 
-const GlobalStyle = createGlobalStyle`
+export default createGlobalStyle`
   html {
     font-size: 100%;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -73,20 +70,10 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
-const Main = styled.main`
-  margin-top: 7rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-`;
-
-const Layout = ({ children }) => (
-  <>
-    <GlobalStyle />
-    <Header />
-    <Main>{children}</Main>
-  </>
-);
-
-export default Layout;
+// const Main = styled.main`
+//   margin-top: 7rem;
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   align-items: center;
+// `;
