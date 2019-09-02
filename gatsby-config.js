@@ -1,4 +1,9 @@
 module.exports = {
+  siteMetadata: {
+    title: "Brayden Killeen",
+    siteUrl: "https://www.braydenkilleen.com",
+    description: "Personal website",
+  },
   plugins: [
     {
       resolve: `gatsby-plugin-styled-components`,
@@ -10,7 +15,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `posts`,
-        path: `${__dirname}/src/posts`,
+        path: `${__dirname}/static/posts`,
       },
     },
     `gatsby-transformer-remark`,
