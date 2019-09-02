@@ -1,8 +1,4 @@
 import React from "react"
-import styled from "styled-components"
+import PageLayout from "../templates/PageLayout"
 
-const S = styled.div`
-  background-color: red;
-`
-
-export default () => <S>HELLO</S>
+export default () => <PageLayout></PageLayout>
