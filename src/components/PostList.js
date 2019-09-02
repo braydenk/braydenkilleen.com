@@ -35,43 +35,17 @@ const ArticleLink = styled(Link)`
   }
 `
 
-function PostList() {
+function PostList({ posts }) {
   return (
     <PostsContainer>
       <ArticleList>
-        <ArticleListItem>
-          <ArticleLink to="/">Another post title</ArticleLink>
-        </ArticleListItem>
-        <ArticleListItem>
-          <ArticleLink to="/">Another post title</ArticleLink>
-        </ArticleListItem>
-        <ArticleListItem>
-          <ArticleLink to="/">Another post title</ArticleLink>
-        </ArticleListItem>
-        <ArticleListItem>
-          <ArticleLink to="/">Another post title</ArticleLink>
-        </ArticleListItem>
-        <ArticleListItem>
-          <ArticleLink to="/">Another post title</ArticleLink>
-        </ArticleListItem>
-        <ArticleListItem>
-          <ArticleLink to="/">Another post title</ArticleLink>
-        </ArticleListItem>
-        <ArticleListItem>
-          <ArticleLink to="/">Another post title</ArticleLink>
-        </ArticleListItem>
-        <ArticleListItem>
-          <ArticleLink to="/">Another post title</ArticleLink>
-        </ArticleListItem>
-        <ArticleListItem>
-          <ArticleLink to="/">Another post title</ArticleLink>
-        </ArticleListItem>
-        <ArticleListItem>
-          <ArticleLink to="/">Another post title</ArticleLink>
-        </ArticleListItem>
-        <ArticleListItem>
-          <ArticleLink to="/">Another post title</ArticleLink>
-        </ArticleListItem>
+        {posts.map(post => {
+          return (
+            <ArticleListItem key={post.id}>
+              <ArticleLink to={post.slug}>{post.title}</ArticleLink>
+            </ArticleListItem>
+          )
+        })}
       </ArticleList>
     </PostsContainer>
   )

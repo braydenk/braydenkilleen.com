@@ -1,6 +1,5 @@
 import React from "react"
 import Header from "../components/Header"
-import PostList from "../components/PostList"
 import styled from "styled-components"
 
 const ContentContainer = styled.main`
@@ -13,10 +12,7 @@ function PageLayout({ children }) {
   return (
     <div>
       <Header />
-      <ContentContainer>
-        <PostList />
-      </ContentContainer>
-      {children}
+      <ContentContainer>{children}</ContentContainer>
     </div>
   )
 }
