@@ -57,13 +57,13 @@ function Header() {
         <HeaderNav>
           <HeaderNavList>
             <HeaderNavListItem>
-              <HeaderNavListLink>Articles</HeaderNavListLink>
+              <HeaderNavListLink to="/">Articles</HeaderNavListLink>
             </HeaderNavListItem>
             <HeaderNavListItem>
-              <HeaderNavListLink>Projects</HeaderNavListLink>
+              <HeaderNavListLink to="/">Projects</HeaderNavListLink>
             </HeaderNavListItem>
             <HeaderNavListItem>
-              <HeaderNavListLink>About</HeaderNavListLink>
+              <HeaderNavListLink to="/">About</HeaderNavListLink>
             </HeaderNavListItem>
           </HeaderNavList>
         </HeaderNav>
