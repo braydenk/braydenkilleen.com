@@ -4,7 +4,17 @@ import Link from './styled/Link';
 import List from './styled/List';
 
 const PostListContainer = styled.div`
-  width: 90%;
+  display: flex;
+  justify-content: center;
+`;
+
+const ArticleList = styled(List)`
+  width: 100%;
+
+  @media (min-width: 400px) {
+    width: 80%;
+  }
+
   @media (min-width: 700px) {
     width: 70%;
   }
@@ -12,13 +22,10 @@ const PostListContainer = styled.div`
   @media (min-width: 1000px) {
     width: 60%;
   }
-
-  @media (min-width: 1200px) {
-    width: 50%;
-  }
 `;
 
 const ArticleListItem = styled.li`
+  width: 100%;
   margin-bottom: 2rem;
 `;
 
@@ -45,7 +52,7 @@ const ArticleLink = styled(Link)`
 function PostList({ posts }) {
   return (
     <PostListContainer>
-      <List>
+      <ArticleList>
         {posts.map(post => {
           return (
             <ArticleListItem key={post.id}>
@@ -53,7 +60,7 @@ function PostList({ posts }) {
             </ArticleListItem>
           );
         })}
-      </List>
+      </ArticleList>
     </PostListContainer>
   );
 }
