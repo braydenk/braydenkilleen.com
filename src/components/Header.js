@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import logo from '../../static/images/logo.svg';
 import menuIcon from '../../static/images/menu.svg';
+import closeIcon from '../../static/images/close.svg';
 import Link from './styled/Link';
 import List from './styled/List';
 
@@ -28,6 +29,7 @@ const HeaderNavSmall = styled(HeaderNav)`
   width: 100vw;
   height: 100vh;
   background-color: #fff;
+  padding: 1rem;
 `;
 
 const HeaderNavList = styled(List)`
@@ -37,7 +39,7 @@ const HeaderNavList = styled(List)`
 const HeaderNavListSmall = styled(HeaderNavList)`
   flex-direction: column;
   height: 100%;
-  justify-content: center;
+  padding: 3rem;
 `;
 
 const HeaderNavListItem = styled.li`
@@ -45,13 +47,22 @@ const HeaderNavListItem = styled.li`
 `;
 
 const HeaderNavListItemSmall = styled(HeaderNavListItem)`
-  margin: 0.5rem 0;
-  text-align: center;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 500;
+  margin: 2rem;
+
+  &:hover {
+    color: #276ef1;
+    text-decoration: none;
+  }
 `;
 
 const HeaderNavListLink = styled(Link)`
   color: #111;
   font-weight: 500;
+  display: inline-block;
+  width: 100%;
 
   &:hover {
     color: #276ef1;
@@ -70,6 +81,15 @@ const MenuIconButton = styled.button`
 const Icon = styled.img`
   height: 2rem;
   width: 2rem;
+`;
+
+const CloseIconButton = styled.button`
+  float: right;
+  background: #fff;
+  border: none;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
 `;
 
 function Header() {
@@ -127,6 +147,9 @@ function Header() {
   const displayMobileNav = () => {
     return (
       <HeaderNavSmall>
+        <CloseIconButton onClick={toggleNav}>
+          <Icon src={closeIcon} />
+        </CloseIconButton>
         <HeaderNavListSmall>
           <HeaderNavListItemSmall>
             <HeaderNavListLink to="/">Articles</HeaderNavListLink>
