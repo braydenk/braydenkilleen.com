@@ -1,5 +1,5 @@
 import React from 'react';
-import projectsData from '../data/projects-data';
+import projectsData from '../../data/projects-data';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
 import PageLayout from '../components/layouts/PageLayout';

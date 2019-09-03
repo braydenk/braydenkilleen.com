@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
-import logo from '../../static/logo.svg';
-import menuIcon from '../../static/menu.svg';
+import logo from '../../static/images/logo.svg';
+import menuIcon from '../../static/images/menu.svg';
 import Link from './styled/Link';
 import List from './styled/List';
 
