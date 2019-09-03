@@ -6,11 +6,7 @@ import Link from './styled/Link';
 import List from './styled/List';
 
 const PageHeader = styled.header`
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 3;
-  width: 100%;
+  grid-area: header;
   background: #fff;
   border-bottom: 1px solid #f4f6f8;
   padding: 1rem;

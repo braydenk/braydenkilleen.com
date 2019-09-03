@@ -3,8 +3,6 @@ import styled from 'styled-components';
 import Link from './styled/Link';
 import List from './styled/List';
 
-const PostListContainer = styled.div``;
-
 const ArticleListItem = styled.li`
   margin-bottom: 2rem;
 `;
@@ -31,17 +29,15 @@ const ArticleLink = styled(Link)`
 
 function PostList({ posts }) {
   return (
-    <PostListContainer>
-      <List>
-        {posts.map(post => {
-          return (
-            <ArticleListItem key={post.id}>
-              <ArticleLink to={post.slug}>{post.title}</ArticleLink>
-            </ArticleListItem>
-          );
-        })}
-      </List>
-    </PostListContainer>
+    <List>
+      {posts.map(post => {
+        return (
+          <ArticleListItem key={post.id}>
+            <ArticleLink to={post.slug}>{post.title}</ArticleLink>
+          </ArticleListItem>
+        );
+      })}
+    </List>
   );
 }
 

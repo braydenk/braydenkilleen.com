@@ -1,18 +1,29 @@
 import React from 'react';
-import GlobalStyles from '../styled/GlobalStyles';
+import { GlobalStyles, theme } from '../styled/Theme';
 import Header from '../Header';
-import styled from 'styled-components';
+import styled, { ThemeProvider } from 'styled-components';
+
+const PageWrapper = styled.div`
+  display: grid;
+  grid-template-areas:
+    'header header header'
+    '. main .';
+  grid-gap: 16px;
+`;
 
 const Main = styled.main`
-  padding: 6rem 2rem 0 2rem;
-  height: 100vh;
+  grid-area: main;
 `;
 
 const PageLayout = ({ children }) => (
   <>
     <GlobalStyles />
-    <Header />
-    <Main>{children}</Main>
+    <ThemeProvider theme={theme}>
+      <PageWrapper>
+        <Header />
+        <Main>{children}</Main>
+      </PageWrapper>
+    </ThemeProvider>
   </>
 );
 

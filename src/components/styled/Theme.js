@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 
-export default createGlobalStyle`
+export const GlobalStyles = createGlobalStyle`
   html {
     font-size: 100%;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -22,3 +22,11 @@ export default createGlobalStyle`
     margin: 0;
   }
 `;
+
+export const theme = {
+  palette: {
+    textColor: '#111',
+    backgroundColor: '#fff',
+    borderColor: '#919EAB',
+  },
+};
