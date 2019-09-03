@@ -6,12 +6,19 @@ export default () => {
   return (
     <PageLayout>
       <Title level={1}>About Me</Title>
-      <Title level={2}>Graduate Software Engineer at Eggion</Title>
-      <Paragraph>Currently working on - at work - spare time</Paragraph>
       <Paragraph>
-        Open-source projects - list of projects contributed to
+        I'm a recent Computer Science graduate from La Trobe University and
+        currently working as a freelance Software Engineer in Melbourne,
+        Australia.
       </Paragraph>
-      <Paragraph>Blog - info on the blog</Paragraph>
+      <div>
+        <Title level={2}>Side projects</Title>
+        <Paragraph>
+          I am currently working on Kihoo a full-stack web application to help
+          students take notes efficiently on their computers. You can check out
+          my other projects here or on Github.
+        </Paragraph>
+      </div>
     </PageLayout>
   );
 };
