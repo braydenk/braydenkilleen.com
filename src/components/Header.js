@@ -7,7 +7,6 @@ import Link from './styled/Link';
 import List from './styled/List';
 
 const PageHeader = styled.header`
-  grid-area: header;
   background: #fff;
   border-bottom: 1px solid #f4f6f8;
   padding: 1rem;
@@ -97,7 +96,7 @@ function Header() {
   const [isScreenSmall, setIsScreenSmall] = useState(false);
 
   useEffect(() => {
-    const mediaQuery = window.matchMedia('(max-width: 500px)');
+    const mediaQuery = window.matchMedia('(max-width: 600px)');
     mediaQuery.addListener(handleMediaQueryChange);
     handleMediaQueryChange(mediaQuery);
 

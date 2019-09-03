@@ -3,6 +3,21 @@ import styled from 'styled-components';
 import Link from './styled/Link';
 import List from './styled/List';
 
+const PostListContainer = styled.div`
+  width: 90%;
+  @media (min-width: 700px) {
+    width: 70%;
+  }
+
+  @media (min-width: 1000px) {
+    width: 60%;
+  }
+
+  @media (min-width: 1200px) {
+    width: 50%;
+  }
+`;
+
 const ArticleListItem = styled.li`
   margin-bottom: 2rem;
 `;
@@ -29,15 +44,17 @@ const ArticleLink = styled(Link)`
 
 function PostList({ posts }) {
   return (
-    <List>
-      {posts.map(post => {
-        return (
-          <ArticleListItem key={post.id}>
-            <ArticleLink to={post.slug}>{post.title}</ArticleLink>
-          </ArticleListItem>
-        );
-      })}
-    </List>
+    <PostListContainer>
+      <List>
+        {posts.map(post => {
+          return (
+            <ArticleListItem key={post.id}>
+              <ArticleLink to={post.slug}>{post.title}</ArticleLink>
+            </ArticleListItem>
+          );
+        })}
+      </List>
+    </PostListContainer>
   );
 }
 

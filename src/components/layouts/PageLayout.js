@@ -3,16 +3,14 @@ import { GlobalStyles, theme } from '../styled/Theme';
 import Header from '../Header';
 import styled, { ThemeProvider } from 'styled-components';
 
-const PageWrapper = styled.div`
-  display: grid;
-  grid-template-areas:
-    'header header header'
-    '. main .';
-  grid-gap: 16px;
-`;
+const PageWrapper = styled.div``;
 
 const Main = styled.main`
-  grid-area: main;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
 `;
 
 const PageLayout = ({ children }) => (
